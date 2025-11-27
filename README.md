@@ -194,15 +194,15 @@ The app will open in `http://localhost:8501`
 
 | Variable           | Tipo         | Descripción                                 |
 |--------------------|--------------|---------------------------------------------|
-| `step`             | int          | Unidad de tiempo (hora)                     |
-| `type`             | categórica   | Tipo de transacción (PAYMENT, TRANSFER...)  |
-| `amount`           | float        | Monto de la transacción                     |
-| `nameOrig`         | string       | Cliente que inicia la transacción           |
-| `oldbalanceOrg`    | float        | Balance inicial del origen                  |
-| `newbalanceOrig`   | float        | Balance final del origen                    |
-| `nameDest`         | string       | Cliente receptor                            |
-| `oldbalanceDest`   | float        | Balance inicial del destino                 |
-| `newbalanceDest`   | float        | Balance final del destino                   |
+| `amount`           | int          | Monto de la transacción                     |
+| `use_chip`         | int/cat      | Uso de chip en la transacción               |
+| `merchant_state`   | string       | Estado/provincia del comercio               |
+| `card_brand`       | cat          | Marca de la tarjeta                         |
+| `card_type`        | cat          | Tipo de tarjeta                             |
+| `has_chip`         | int/cat      | Si la tarjeta tiene chip                    |
+| `mcc`              | int/cat      | Código MCC del comercio                     |
+| `zip`              | string/int   | Código postal del comercio                  |
+| `merchant_city`    | string       | Ciudad del comercio                         |
 | `isFraud`          | int          | 1 si es fraude, 0 si no (TARGET)            |
 
 - **No Fraude:** 91%  | **Fraude:** 9%  | **Ratio:** 10:1
@@ -213,15 +213,15 @@ The app will open in `http://localhost:8501`
 
 | Variable           | Type         | Description                                 |
 |--------------------|--------------|---------------------------------------------|
-| `step`             | int          | Time unit (hour)                            |
-| `type`             | categorical  | Transaction type (PAYMENT, TRANSFER...)     |
-| `amount`           | float        | Transaction amount                          |
-| `nameOrig`         | string       | Originating customer                        |
-| `oldbalanceOrg`    | float        | Initial origin balance                      |
-| `newbalanceOrig`   | float        | Final origin balance                        |
-| `nameDest`         | string       | Destination customer                        |
-| `oldbalanceDest`   | float        | Initial destination balance                 |
-| `newbalanceDest`   | float        | Final destination balance                   |
+| `amount`           | int          | Transaction amount                          |
+| `use_chip`         | int/cat      | Chip usage in transaction                   |
+| `merchant_state`   | string       | Merchant state/province                     |
+| `card_brand`       | cat          | Card brand                                  |
+| `card_type`        | cat          | Card type                                   |
+| `has_chip`         | int/cat      | Whether the card has chip                   |
+| `mcc`              | int/cat      | Merchant MCC code                           |
+| `zip`              | string/int   | Merchant postal code                        |
+| `merchant_city`    | string       | Merchant city                               |
 | `isFraud`          | int          | 1 if fraud, 0 if not (TARGET)               |
 
 - **No Fraud:** 91%  | **Fraud:** 9%  | **Ratio:** 10:1
